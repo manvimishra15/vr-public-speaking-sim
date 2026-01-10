@@ -3764,6 +3764,7 @@ GameObject:
   - component: {fileID: 2339243664654219258}
   - component: {fileID: 7991671243158692737}
   - component: {fileID: 9188464834114189304}
+  - component: {fileID: 4883981360235721614}
   m_Layer: 0
   m_Name: GtRedFabric
   m_TagString: Untagged
@@ -3839,6 +3840,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4883981360235721614
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7494986480487309706}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2109519824968396887, guid: a5e2707c3ca237d48988de1246c46a95, type: 3}
 --- !u!1 &7497251984741395051
 GameObject:
   m_ObjectHideFlags: 0
