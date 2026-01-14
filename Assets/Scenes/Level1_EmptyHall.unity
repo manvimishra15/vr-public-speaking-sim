@@ -303,24 +303,8 @@ MonoBehaviour:
   microphoneDevice: 
   sampleRate: 44100
   sampleLengthSec: 1
+  loudnessThreshold: 0.01
   pauseTimeThreshold: 1.2
-  longPauseThreshold: 3.5
-  loudnessThreshold: 0.008
-  varianceThreshold: 0.0012
-  anxietySmoothSpeed: 5
-  calmAnxietyThreshold: 0.3
-  calmRequiredSeconds: 1.5
-  zcrNormalMin: 0.045
-  zcrNormalMax: 0.11
-  zcrExtreme: 0.2
-  stressGain: 10
-  pauseStressWeight: 0.55
-  speedStressWeight: 0.75
-  tremorStressWeight: 0.35
-  freezeStressWeight: 0.6
-  calmReliefPerSec: 3
-  maxCalmRelief: 6
-  pauseDecayPerSec: 0.45
 --- !u!1 &57147314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,6 +1842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e06fbbbc82343468262e6d899440e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSpeaking: 0
   stress: 20
   micLoudness: 0
   speechSpeed: 0
@@ -2744,6 +2729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 559200913}
   - component: {fileID: 559200914}
+  - component: {fileID: 559200915}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -2790,6 +2776,23 @@ MonoBehaviour:
   maxStressText: {fileID: 876849005}
   totalPausesText: {fileID: 2023833431}
   voiceSteadinessText: {fileID: 1164540705}
+--- !u!114 &559200915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559200912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c1c8cc04154494eaff6835b3b21343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  microphoneDevice: 
+  sampleRate: 44100
+  sampleLengthSec: 1
+  loudnessThreshold: 0.01
+  pauseTimeThreshold: 1.2
 --- !u!1001 &578118074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5555,6 +5558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e06fbbbc82343468262e6d899440e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSpeaking: 0
   stress: 20
   micLoudness: 0
   speechSpeed: 0
@@ -6562,6 +6566,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2100208028559941110, guid: f71041fd118fbb34aa9d2dd6a1d96fce, type: 3}
   m_PrefabInstance: {fileID: 1491452414}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1510603378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1510603380}
+  - component: {fileID: 1510603381}
+  m_Layer: 0
+  m_Name: VAD_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1510603380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510603378}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.369742, y: -1.5853151, z: -7.8812585}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1510603381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510603378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e33330700e97040b6687f165a37d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1538462904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9167,3 +9215,4 @@ SceneRoots:
   - {fileID: 93744539}
   - {fileID: 395037904}
   - {fileID: 559200913}
+  - {fileID: 1510603380}

@@ -4,6 +4,8 @@ using System;
 public class StressManager : MonoBehaviour
 {
     public static StressManager Instance;
+[Header("VAD")]
+public bool isSpeaking;
 
     [Header("Stress (0-100)")]
     [Range(0, 100)] public float stress = 20f;
