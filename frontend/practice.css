@@ -1,0 +1,102 @@
+/*
+
+
+body {
+  background: radial-gradient(circle, #111233, #050510);
+  color: white;
+  font-family: Poppins, sans-serif;
+  padding: 60px;
+}
+
+.practice-card {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 16px;
+}
+.camera-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+video {
+  width: 320px;
+  height: 240px;
+  border-radius: 20px;
+  background: black;
+  box-shadow: 0 0 25px rgba(127,92,255,0.6);
+}
+
+.stress-section {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.stress-bar {
+  width: 300px;
+  height: 16px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.stress-fill {
+  height: 100%;
+  width: 30%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00ff99, #ff4444);
+  transition: width 0.5s ease;
+}
+
+.practice-controls {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.practice-controls button {
+  padding: 10px 22px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #7f5cff, #ff2fdc);
+  color: white;
+  font-weight: 600;
+}
+.practice-section {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.camera-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+video {
+  width: 320px;
+  height: 240px;
+  border-radius: 20px;
+  background: black;
+}
+
+.stress-bar {
+  width: 300px;
+  height: 16px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.stress-fill {
+  height: 100%;
+  width: 30%;
+  background: linear-gradient(90deg, #00ff99, #ff4444);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+
+*/

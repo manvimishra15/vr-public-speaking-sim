@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindScapeXR | Virtual Therapy for Phobias</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<div id="rocket-cursor">🚀</div>
+<body>
+
+<header>
+  <div class="logo">MindScapeXR</div>
+ <nav>
+  <a href="#features">Features</a>
+  <a href="#scenes">VR Levels</a>
+  <a href="#ai">AI Assistant</a>
+  <a href="#about">About</a>
+
+  <span class="nav-action" onclick="goToProfile()">Profile</span>
+  <span class="nav-action theme-toggle" onclick="toggleTheme()">Toggle Theme</span>
+  <span class="nav-action logout" onclick="logout()">Logout</span>
+</nav>
+
+
+</header>
+
+</div>
+
+
+
+<section class="hero">
+  <h1>Face Your Fears<br>Safely in Virtual Reality</h1>
+  <p>
+    AI-powered VR exposure therapy that adapts to your stress level,
+    helping you overcome phobias from the comfort of your home.
+  </p>
+  <button class="btn"
+  onclick="document.getElementById('next')
+  .scrollIntoView({ behavior: 'smooth' })">
+  Get Started
+</button>
+
+<div class="scroll-indicator">
+  <span></span>
+</div>
+
+
+
+
+</section>
+
+<section id="features">
+  <h2 class="section-title">Core Features</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>AI Stress Detection</h3>
+      <p>Detects anxiety through voice and movement patterns.</p>
+    </div>
+    <div class="card">
+      <h3>Adaptive Difficulty</h3>
+      <p>Automatically adjusts exposure intensity.</p>
+    </div>
+    <div class="card">
+      <h3>AI Calm Coach</h3>
+      <p>Guided breathing and calming support.</p>
+    </div>
+    <div class="card">
+      <h3>Progress Tracking</h3>
+      <p>Visual improvement and confidence growth.</p>
+    </div>
+  </div>
+</section>
+<section id="next" class="next-screen">
+  <h2 class="section-title">Choose Your Therapy Experience</h2>
+
+  <div class="grid">
+
+    <!-- Heights -->
+    <div class="card vr-card">
+  <span class="emoji">🌆</span>
+  <h3>Heights Therapy</h3>
+  <p>Gradual exposure to elevated environments.</p>
+
+  <!-- Difficulty Selector -->
+  <div class="difficulty-select">
+    <button onclick="selectDifficulty('Heights','Low')">Low</button>
+    <button onclick="selectDifficulty('Heights','Medium')">Medium</button>
+    <button onclick="selectDifficulty('Heights','High')">High</button>
+  </div>
+
+  <!-- Start Button -->
+  <button class="start-btn" onclick="startTherapy('Heights')">
+    Start Therapy
+  </button>
+</div>
+
+    <!-- Public Speaking -->
+    <div class="card vr-card">
+  <span class="emoji">🎤</span>
+  <h3>Public Speaking</h3>
+  <p>Practice speaking in front of virtual audiences.</p>
+
+  <div class="difficulty-select">
+    <button onclick="selectDifficulty('Public Speaking','Low')">Low</button>
+    <button onclick="selectDifficulty('Public Speaking','Medium')">Medium</button>
+    <button onclick="selectDifficulty('Public Speaking','High')">High</button>
+  </div>
+
+  <button class="start-btn" onclick="startTherapy('Public Speaking')">
+    Start Therapy
+  </button>
+</div>
+
+<!-- Darkness -->
+    <div class="card vr-card">
+      <span class="emoji">🌑</span>
+      <h3>Darkness Exposure</h3>
+      <p>Controlled low-light environments to reduce fear of darkness.</p>
+
+      <div class="difficulty-select">
+        <button onclick="selectDifficulty('Darkness','Low')">Low</button>
+        <button onclick="selectDifficulty('Darkness','Medium')">Medium</button>
+        <button onclick="selectDifficulty('Darkness','High')">High</button>
+      </div>
+
+      <button class="start-btn" onclick="startTherapy('Darkness')">
+        Start Therapy
+      </button>
+    </div>
+
+    <!-- Clautrophobia -->
+    <div class="card vr-card">
+  <span class="emoji">📦</span>
+  <h3>Claustrophobia Therapy</h3>
+<p>Gradual exposure to enclosed and confined virtual spaces.</p>
+  <div class="difficulty-select">
+    <button onclick="selectDifficulty('Claustrophobia','Low')">Low</button>
+<button onclick="selectDifficulty('Claustrophobia','Medium')">Medium</button>
+<button onclick="selectDifficulty('Claustrophobia','High')">High</button>
+</div>
+<button class="start-btn" onclick="startTherapy('Claustrophobia')">
+  Start Therapy
+</button>
+</div>
+
+
+  </div>
+</section>
+
+<section id="countdown" class="countdown-screen">
+  <h2>Session Starting In</h2>
+  <div id="timer">5</div>
+</section>
+<section id="summary" class="summary-screen">
+  <h2>Session Complete 🎉</h2>
+  <p>Stress Reduced</p>
+  <div class="stress-bar">
+    <div class="stress-fill" style="width:40%"></div>
+  </div>
+  <p class="confidence">Confidence +15%</p>
+</section>
+
+
+
+
+
+<section id="scenes">
+  <h2 class="section-title">VR Exposure Levels</h2>
+
+  <div class="grid">
+    <!-- Card 1 -->
+    <div class="card">
+      <h3>Fear of Heights</h3>
+      <div class="difficulty tappable">
+        <span onclick="selectExposure(this,'Heights','Low')">Low</span>
+        <span onclick="selectExposure(this,'Heights','Medium')">Medium</span>
+        <span onclick="selectExposure(this,'Heights','High')">High</span>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <h3>Public Speaking</h3>
+      <div class="difficulty tappable">
+        <span onclick="selectExposure(this,'Public Speaking','Low')">Low</span>
+        <span onclick="selectExposure(this,'Public Speaking','Medium')">Medium</span>
+        <span onclick="selectExposure(this,'Public Speaking','High')">High</span>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <h3>Darkness</h3>
+      <div class="difficulty tappable">
+        <span onclick="selectExposure(this,'Darkness','Low')">Low</span>
+        <span onclick="selectExposure(this,'Darkness','Medium')">Medium</span>
+        <span onclick="selectExposure(this,'Darkness','High')">High</span>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <h3>Claustrophobia</h3>
+<div class="difficulty tappable">
+  <span onclick="selectExposure(this,'Claustrophobia','Low')">Low</span>
+  <span onclick="selectExposure(this,'Claustrophobia','Medium')">Medium</span>
+  <span onclick="selectExposure(this,'Claustrophobia','High')">High</span>
+</div>
+    </div>
+  </div>
+
+
+</section>
+<section id="ai">
+  <h2 class="section-title">AI Therapy Assistant</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Real-Time Calm Guidance</h3>
+      <p>
+        The AI assistant guides users with breathing exercises,
+        reassurance, and grounding techniques during exposure.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Stress-Aware Responses</h3>
+      <p>
+        Responses adapt based on detected stress levels
+        from voice and movement patterns.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>24/7 Companion</h3>
+      <p>
+        Users can interact with the AI anytime for anxiety support
+        and confidence building.
+      </p>
+    </div>
+  </div>
+</section>
+<section id="stress">
+  <h2 class="section-title">Stress Level</h2>
+  <div class="stress-bar">
+    <div class="stress-fill" id="stressFill"></div>
+  </div>
+</section>
+
+
+
+<!-- Sign In Modal -->
+<div class="auth-modal" id="authModal">
+  <div class="auth-box">
+    <h2>Sign In</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button class="btn full">Login</button>
+  </div>
+</div>
+
+<footer>
+  © 2026 MindScapeXR | Hackcelestia'26 | Created by Pragati Coders
+</footer>
+
+<!-- JS -->
+
+<!-- AI Chat Bubble -->
+<!-- AI Chat Bubble -->
+<div class="ai-chat" id="aiChat">
+  <div class="ai-header">AI Therapist</div>
+
+  <div class="ai-body" id="aiBody"></div>
+
+  <div class="ai-controls">
+    <input
+      type="text"
+      id="aiInput"
+      placeholder="Type or speak..."
+      onkeydown="handleEnter(event)"
+    />
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="startListening()">🎙️</button>
+    <button onclick="startUltravoxCall()">Start Ultravox Call 🎧</button>
+
+  </div>
+</div>
+
+
+
+<div class="ai-fab" id="aiFab">🤖</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

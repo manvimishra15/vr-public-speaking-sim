@@ -1,0 +1,1191 @@
+:root {
+  --bg: #050510;
+  --card: #0f1025;
+  --primary: #7f5cff;
+  --secondary: #00e5ff;
+  --accent: #ff2fdc;
+  --text: #e6e6f0;
+}
+
+body.light {
+  --bg: #f4f6ff;
+  --card: #ffffff;
+  --primary: #362e61;
+  --secondary: #0099cc;
+  --accent: #ff4da6;
+  --text: #2a2a53;
+}
+
+body.light {
+  color: var(--text);
+}
+body.light header {
+  background: rgba(255, 255, 255, 0.85);
+}
+body.light .card {
+  background: #ffffff;
+  color: var(--text);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   LIGHT THEME FIX (FULL)
+   ========================= */
+
+body.light {
+  background: #f4f6ff;
+  color: #1a1a2e;
+}
+
+/* ---------- HEADER ---------- */
+body.light header {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+body.light nav a,
+body.light .nav-action {
+  color: #1a1a2e;
+}
+
+body.light .logout {
+  color: #ff2f7d;
+}
+
+/* ---------- HERO SECTION ---------- */
+body.light .hero {
+  background: linear-gradient(
+    180deg,
+    #f4f6ff 0%,
+    #e8ecff 100%
+  );
+}
+
+/* HERO TITLE */
+body.light .hero h1 {
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+  color: #3a3aff;
+  text-shadow: none;
+}
+
+/* HERO PARAGRAPH */
+body.light .hero p {
+  color: #333;
+  opacity: 0.95;
+}
+
+/* ---------- BUTTON ---------- */
+body.light .btn {
+  background: linear-gradient(135deg, #5a3bff, #ff4da6);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(90,59,255,0.4);
+}
+
+/* ---------- SCROLL INDICATOR ---------- */
+body.light .scroll-indicator {
+  border-color: #5a3bff;
+}
+
+body.light .scroll-indicator span {
+  background: #5a3bff;
+}
+
+/* ---------- CARDS ---------- */
+body.light .card {
+  background: #ffffff;
+  color: #1a1a2e;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body.light .card h3 {
+  color: #3a3aff;
+}
+
+body.light .card p {
+  color: #444;
+}
+
+/* ---------- AI CHAT ---------- */
+body.light .ai-chat {
+  background: #ffffff;
+  color: #1a1a2e;
+}
+
+body.light .ai-header {
+  background: linear-gradient(90deg, #5a3bff, #ff4da6);
+  color: white;
+}
+
+/* ---------- STRESS BAR ---------- */
+body.light .stress-bar {
+  background: rgba(0,0,0,0.1);
+}
+
+/* ---------- GENERAL TEXT ---------- */
+body.light p,
+body.light span {
+  opacity: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+/* 🌌 Calm Large Bubble Background */
+body {
+  background:
+    radial-gradient(circle at 15% 25%, rgba(127,92,255,0.25) 0%, transparent 45%),
+    radial-gradient(circle at 75% 30%, rgba(255,47,220,0.22) 0%, transparent 50%),
+    radial-gradient(circle at 40% 75%, rgba(0,229,255,0.20) 0%, transparent 55%),
+    radial-gradient(circle at 85% 80%, rgba(127,92,255,0.18) 0%, transparent 60%),
+    radial-gradient(circle at center, #0b0d2a, #050510);
+
+  background-attachment: fixed;
+  animation: bubbleFloat 40s ease-in-out infinite alternate;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(5,5,16,0.8);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  color: var(--secondary);
+  text-shadow: 0 0 15px var(--secondary);
+}
+
+nav a, .theme-toggle {
+  margin-left: 25px;
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero {
+  background: radial-gradient(circle at top, #111233, var(--bg));
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+
+  font-size: clamp(3.8rem, 5vw, 6.2rem); /* 🔥 BIG like 2nd */
+  line-height: 1.12;
+  text-align: center;
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #28e0ff 0%,
+    #6f7bff 40%,
+    #ff4fd8 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 25px;
+}
+/* 🔧 Force readable hero text */
+.hero p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.hero h1 {
+  text-shadow: 
+    0 0 20px rgba(127,92,255,0.35),
+    0 0 40px rgba(255,47,220,0.25);
+}
+
+body.light .hero h1 {
+  -webkit-text-fill-color: unset;
+  background: none;
+  color: var(--primary);
+}
+body.light p {
+  opacity: 0.9;
+}
+
+.hero p {
+  max-width: 700px;
+  opacity: 0.85;
+  margin: 25px 0;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  box-shadow: 0 0 25px rgba(127,92,255,0.6);
+}
+
+.btn:hover {
+  transform: scale(1.08);
+}
+
+section {
+  padding: 80px 60px;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ⬅ wider cards */
+  gap: 50px;                        /* ⬅ more spacing between cards */
+}
+
+
+.card {
+  background: linear-gradient(180deg, var(--card), transparent);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+.card h3 {
+  color: var(--secondary);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.difficulty span {
+  display: inline-block;
+  padding: 6px 14px;
+  margin-right: 6px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+}
+
+.auth-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+  width: 360px;
+  background: var(--card);
+  padding: 35px;
+  border-radius: 18px;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: var(--text);
+}
+
+.btn.full {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.6;
+}
+
+.scroll-indicator {
+  margin-top: 40px;
+  width: 24px;
+  height: 40px;
+  border: 2px solid var(--secondary);
+  border-radius: 20px;
+  position: relative;
+  opacity: 0.8;
+}
+
+.scroll-indicator span {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--secondary);
+  border-radius: 50%;
+  animation: scrollMove 1.5s infinite;
+}
+
+@keyframes scrollMove {
+  0% { opacity: 0; top: 8px; }
+  50% { opacity: 1; }
+  100% { opacity: 0; top: 22px; }
+}
+#features {
+  transition: box-shadow 0.6s ease, transform 0.6s ease;
+}
+
+#features.active {
+  box-shadow: 0 0 80px rgba(0,229,255,0.2);
+  transform: scale(1.01);
+}
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.card.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.next-screen {
+  background: radial-gradient(circle at top, #0f1025, transparent);
+}
+nav span {
+  margin-left: 20px;
+}
+nav span:last-child {
+  color: var(--accent);
+  font-weight: 500;
+}
+nav a,
+.nav-action {
+  margin-left: 20px;
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
+}
+
+/* Hover underline animation */
+nav a::after,
+.nav-action::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+.nav-action:hover::after {
+  width: 100%;
+}
+
+/* Logout special color */
+.logout {
+  color: var(--accent);
+}
+nav a:active,
+.nav-action:active {
+  transform: scale(0.95);
+}
+
+.ai-chat {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+
+  z-index: 9999;                 /* 🔥 SAME OR HIGHER */
+}
+
+
+
+.ai-header {
+  padding: 12px;
+  font-family: Orbitron;
+  background: linear-gradient(90deg, var(--secondary), var(--accent));
+  color: black;
+  text-align: center;
+}
+
+.ai-body {
+  height: 240px;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  overflow-y: auto;
+}
+
+.ai-msg {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 85%;
+}
+
+.ai-msg.user {
+  background: var(--primary);
+  color: white;
+  align-self: flex-end;
+}
+
+.ai-msg.bot {
+  background: rgba(255,255,255,0.1);
+  align-self: flex-start;
+}
+
+.ai-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  background: var(--card);
+  position: relative;
+  z-index: 10;
+}
+
+
+.ai-controls input {
+  flex: 1;
+  padding: 8px 10px;
+
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background: rgba(255,255,255,0.1);
+  color: var(--text);
+}
+
+.ai-controls button {
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+
+  cursor: pointer;
+  pointer-events: auto;
+
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+
+  z-index: 11;
+}
+
+
+.ai-chat {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+
+  width: 340px;
+  background: var(--card);
+  border-radius: 18px;
+
+  display: none;
+  flex-direction: column;
+
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+  overflow: hidden;
+
+  z-index: 9999;
+}
+
+.ai-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #7f5cff, #ff2fdc);
+  box-shadow: 0 0 30px rgba(255, 47, 220, 0.8);
+
+  z-index: 999999;
+}
+.ai-controls input {
+  flex: 1;
+  min-width: 0;
+  pointer-events: auto;
+}
+
+/* 💎 Light 3D Therapy Cards */
+.vr-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.18),
+    rgba(255,255,255,0.05)
+  );
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.25);
+
+  padding: 42px 32px;
+  min-height: 320px;
+  text-align: center;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.6),
+    inset 0 1px 1px rgba(255,255,255,0.3);
+
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+.vr-card .emoji {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 12px rgba(0,229,255,0.6));
+}
+
+.vr-card h3 {
+  color: #eaf3ff;
+  font-size: 1.45rem;
+}
+
+.vr-card p {
+  color: rgba(234,243,255,0.85);
+}
+.vr-card {
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.vr-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.8),
+    inset 0 1px 1px rgba(255,255,255,0.4);
+}
+
+
+.start-btn {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  color: black;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+}
+.stress-bar {
+  width: 100%;
+  max-width: 400px;
+  height: 18px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  margin: auto;
+}
+
+.stress-fill {
+  height: 100%;
+  width: 30%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00ff99, #ff4444);
+  transition: width 0.5s ease;
+}
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: var(--card);
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+}
+
+.profile-menu p {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.difficulty-select {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.difficulty-select button {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.75rem;
+  cursor: pointer;
+  background: rgba(255,255,255,0.15);
+  color: var(--text);
+}
+
+.difficulty-select button:hover {
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  color: black;
+}
+.countdown-screen {
+  display: none;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+#timer {
+  font-size: 4rem;
+  font-family: Orbitron;
+  color: var(--secondary);
+  margin-top: 20px;
+}
+.summary-screen {
+  display: none;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.confidence {
+  margin-top: 15px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.ai-controls button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+}
+.difficulty.tappable span {
+  cursor: pointer;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.difficulty.tappable span:hover {
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  color: black;
+}
+
+/* Selected state */
+.difficulty.tappable span.active {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  box-shadow: 0 0 12px rgba(255,47,220,0.6);
+}
+.hero .ai-header {
+  display: none !important;
+}
+
+.hero,
+section,
+.grid,
+.card {
+  position: relative;
+  z-index: 1;
+}
+
+button,
+a,
+input,
+.ai-chat,
+.ai-fab {
+  pointer-events: auto;
+}
+/* 🚀 Custom Rocket Cursor */
+body {
+  cursor: none; /* hide default cursor */
+}
+
+#rocket-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 26px;
+
+  pointer-events: none;
+  z-index: 9999999;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: transform 0.08s linear;
+}
+/* 🌌 3D Background Effect */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(127,92,255,0.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,47,220,0.12), transparent 45%);
+
+  z-index: -1;
+  animation: floatBG 12s ease-in-out infinite alternate;
+}
+
+@keyframes floatBG {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+/* 🧠 Vertical Therapy Cards */
+#next .grid {
+  display: flex;
+  flex-direction: column; /* ⬅️ vertical */
+  gap: 35px;              /* ⬅️ spacing between cards */
+  align-items: center;    /* ⬅️ centered cards */
+}
+
+#next .vr-card {
+  width: 100%;
+  max-width: 420px;       /* ⬅️ neat, not too wide */
+}
+
+#next .grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+#next .grid::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  border-radius: 10px;
+}
+/* 🌌 Starry Background */
+body {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.06) 1px, transparent 2px),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05) 1px, transparent 2px),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.04) 1px, transparent 2px),
+    radial-gradient(circle at 30% 60%, rgba(255,255,255,0.05) 1px, transparent 2px),
+    radial-gradient(circle at 70% 90%, rgba(255,255,255,0.06) 1px, transparent 2px),
+    radial-gradient(circle at top, #0b0d2a, #050510);
+  background-size: 200px 200px;
+  animation: starFloat 30s linear infinite;
+}
+
+@keyframes starFloat {
+  from { background-position: 0 0; }
+  to { background-position: 400px 400px; }
+}
+#rocket-cursor {
+  transition: transform 0.08s ease-out;
+}
+
+#rocket-cursor {
+  transition: transform 0.12s ease-out;
+}
+/* 🌟 About Us Section */
+.about-section {
+  background: radial-gradient(
+    circle at top,
+    rgba(127,92,255,0.12),
+    transparent
+  );
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.about-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.18),
+    rgba(255,255,255,0.05)
+  );
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.25);
+
+  padding: 35px;
+  text-align: left;
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.6),
+    inset 0 1px 1px rgba(255,255,255,0.3);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.8),
+    inset 0 1px 1px rgba(255,255,255,0.4);
+}
+
+.about-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 12px;
+  color: var(--secondary);
+}
+
+.about-card p {
+  color: rgba(234,243,255,0.85);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+body.light .about-card {
+  background: #ffffff;
+  color: #1a1a2e;
+}
+
+body.light .about-card p {
+  color: #444;
+}
+html {
+  scroll-behavior: smooth;
+}
+@keyframes bubbleFloat {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 10% 15%;
+  }
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(30px);
+  pointer-events: none;
+}
+/* ✨ Starry Overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    radial-gradient(1.5px 1.5px at 20% 30%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1.2px 1.2px at 40% 80%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 85% 60%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1.5px 1.5px at 55% 50%, rgba(255,255,255,0.5), transparent);
+
+  background-size: 300px 300px;
+  animation: starsDrift 60s linear infinite;
+
+  pointer-events: none;
+  z-index: -1;
+}
+@keyframes starsDrift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 600px;
+  }
+}
+.hero,
+section,
+header,
+footer {
+  position: relative;
+  z-index: 1;
+}
+/* 🔧 Force Profile text to white */
+nav .nav-action {
+  color: #ffffff !important;
+}
+
+/* 🔧 Fix black section headings */
+.section-title {
+  color: #ffffff !important;
+}
+/* 🔧 Fix black card text */
+.card h3,
+.card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+/* 🔧 Catch-all for dark text on dark background */
+section h2,
+section h3,
+section p {
+  color: rgba(255, 255, 255, 0.9);
+}
+body.light section h2,
+body.light section h3,
+body.light section p {
+  color: #1a1a2e;
+}
+/* ===============================
+   FINAL TEXT COLOR STANDARD
+   (Matches screenshot exactly)
+   =============================== */
+
+/* Section titles like "Core Features" */
+.section-title {
+  color: #e6e6f0 !important;
+  letter-spacing: 0.5px;
+}
+
+/* Card headings like "AI Stress Detection" */
+.card h3 {
+  color: #00e5ff !important;
+  font-weight: 600;
+}
+
+/* Card description text */
+.card p {
+  color: rgba(255, 255, 255, 0.85) !important;
+  line-height: 1.6;
+}
+
+/* Any remaining headings inside sections */
+section h2 {
+  color: #e6e6f0 !important;
+}
+
+section h3 {
+  color: #00e5ff !important;
+}
+
+section p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+/* Light theme overrides */
+body.light .section-title,
+body.light section h2 {
+  color: #1a1a2e !important;
+}
+
+body.light .card h3 {
+  color: #3a3aff !important;
+}
+
+body.light .card p,
+body.light section p {
+  color: #444 !important;
+}
+/* ===============================
+   Highlight VR Exposure Levels
+   Low / Medium / High
+   =============================== */
+
+/* Base style */
+.difficulty span {
+  display: inline-block;
+  padding: 8px 18px;
+  margin: 6px 6px 0 0;
+
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.difficulty span:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0,229,255,0.9),
+    rgba(127,92,255,0.9)
+  );
+  color: #050510;
+
+  box-shadow:
+    0 0 12px rgba(0,229,255,0.6),
+    0 0 24px rgba(127,92,255,0.4);
+
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Active / selected state (you already toggle .active in JS) */
+.difficulty span.active {
+  background: linear-gradient(
+    135deg,
+    #00e5ff,
+    #ff2fdc
+  );
+  color: #050510;
+
+  box-shadow:
+    0 0 16px rgba(0,229,255,0.9),
+    0 0 32px rgba(255,47,220,0.6);
+
+  border-color: transparent;
+  font-weight: 600;
+}
+body.light .difficulty span {
+  background: rgba(0,0,0,0.05);
+  border-color: rgba(0,0,0,0.2);
+  color: #1a1a2e;
+}
+
+body.light .difficulty span:hover,
+body.light .difficulty span.active {
+  color: #ffffff;
+}
+footer {
+  color: #e6e6f0;              /* soft white */
+  font-size: 0.9rem;
+  opacity: 1;                  /* remove fade */
+  text-align: center;
+  padding: 30px 20px;
+
+  /* subtle glow for readability */
+  text-shadow:
+    0 0 6px rgba(127, 92, 255, 0.6),
+    0 0 12px rgba(255, 47, 220, 0.4);
+
+  /* optional glass effect behind text */
+  background: linear-gradient(
+    to top,
+    rgba(5, 5, 20, 0.6),
+    rgba(5, 5, 20, 0.0)
+  );
+}
+footer {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #7f5cff, #00e5ff);
+}
+/* ===== HEADER TEXT VISIBILITY FIX (LIGHT THEME) ===== */
+
+body.light header {
+  background: #ffffff;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+/* Nav links + actions */
+body.light nav a,
+body.light .nav-action {
+  color: #1a1a2e !important;   /* dark readable text */
+  opacity: 1;
+}
+
+/* Hover underline still visible */
+body.light nav a::after,
+body.light .nav-action::after {
+  background: linear-gradient(90deg, #5a3bff, #ff4da6);
+}
+
+/* Logout stays accent */
+body.light .logout {
+  color: #ff2f7d !important;
+  font-weight: 600;
+}
+
+/* Logo visibility */
+body.light .logo {
+  color: #0099cc;
+  text-shadow: none;
+}
+.logout {
+  color: #ff4d6d; /* strong pink-red */
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(255, 77, 109, 0.6);
+}
+.logout:hover {
+  color: #ff6f91;
+  text-shadow: 
+    0 0 10px rgba(255, 111, 145, 0.9),
+    0 0 20px rgba(255, 111, 145, 0.6);
+}
+body.light .logout {
+  color: #e6003a; /* darker red for white background */
+  text-shadow: none;
+}
+body.light .logout:hover {
+  color: #ff0055;
+  text-decoration: underline;
+}
+/* ===== FORCE LOGOUT HIGHLIGHT (BOTH THEMES) ===== */
+
+header nav .logout {
+  color: #ff4d6d !important;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(255, 77, 109, 0.9);
+}
+header nav .logout:hover {
+  color: #ff7a9e !important;
+  text-shadow:
+    0 0 12px rgba(255, 122, 158, 1),
+    0 0 24px rgba(255, 122, 158, 0.8);
+}
+body.light header nav .logout {
+  color: #e6003a !important;
+  text-shadow: none;
+}
+body.light header nav .logout:hover {
+  color: #ff004f !important;
+  text-decoration: underline;
+}
+
+
+#rocket-cursor {
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+
+#rocket-cursor{
+  pointer-events: none !important;
+}
+
+
+.ai-chat{
+  position: fixed;
+  z-index: 999999 !important;
+  pointer-events: auto;
+}

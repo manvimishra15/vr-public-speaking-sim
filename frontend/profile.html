@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Dashboard | MindScapeXR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<header class="dash-header">
+  <h1>👤 User Dashboard</h1>
+  <button onclick="goBack()">← Back</button>
+</header>
+
+<section class="dashboard">
+
+  <!-- USER INFO -->
+  <div class="dash-card">
+    <h3>User Information</h3>
+    <p><strong>Name:</strong> <span id="userName">User</span></p>
+    <p><strong>Email:</strong> <span id="userEmail">—</span></p>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="dash-card">
+    <h3>Therapy Progress</h3>
+    <p id="sessionCount">Completed Sessions: 0</p>
+    <p id="avgStress">Average Stress: —</p>
+  </div>
+
+  <!-- RECENT SESSIONS -->
+  <div class="dash-card">
+    <h3>Recent Sessions</h3>
+    <ul id="sessionList"></ul>
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <div class="dash-card">
+    <h3>Achievements</h3>
+    <div id="achievementList"></div>
+  </div>
+
+</section>
+
+<script src="profile.js"></script>
+</body>
+</html>

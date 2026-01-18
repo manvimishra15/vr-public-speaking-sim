@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Choose Therapy | MindScapeXR</title>
+  <link rel="stylesheet" href="therapy.css" />
+</head>
+<body>
+
+<h1 id="phobiaTitle"></h1>
+
+<!-- CHOICE -->
+<div class="choice-container">
+  <div class="choice-card" onclick="startVR()">
+  🥽
+  <h3>VR Therapy</h3>
+  <p>Immersive exposure experience</p>
+</div>
+
+
+  <div class="choice-card" onclick="startNonVR()">
+
+    🧠
+    <h3>Non-VR Therapy</h3>
+    <p>Guided practices & exercises</p>
+  </div>
+</div>
+
+<!-- NON-VR SECTION -->
+<section id="nonVrSection" class="hidden">
+  <h2 id="nonVrTitle"></h2>
+  <p class="subtitle">Choose a practice to begin</p>
+
+  <div id="therapyGrid" class="non-vr-grid"></div>
+</section>
+
+<!-- PRACTICE MODAL -->
+<div id="practiceModal" class="practice-modal hidden">
+  <div class="practice-box">
+    <h3 id="practiceTitle"></h3>
+    <p id="practiceText"></p>
+    <div id="practiceVisual"></div>
+    <button onclick="closePractice()">Done</button>
+  </div>
+</div>
+
+<script src="therapy.js"></script>
+</body>
+</html>

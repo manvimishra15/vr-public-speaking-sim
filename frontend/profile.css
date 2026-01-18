@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #111233, #050510);
+  color: white;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.5);
+}
+
+.dash-header h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00e5ff;
+}
+
+.dash-header button {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #7f5cff, #ff2fdc);
+  color: white;
+}
+
+.dashboard {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.dash-card {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+.dash-card h3 {
+  color: #00e5ff;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
